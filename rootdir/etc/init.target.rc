@@ -44,6 +44,9 @@ on fs
     # Start HW service manager early
     start hwservicemanager
 
+    setprop persist.adb.nonblocking_ffs 0
+    setprop ro.adb.nonblocking_ffs 0
+
  on late-fs
     # Start services for bootanim
     start surfaceflinger
