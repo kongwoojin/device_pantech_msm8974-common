@@ -580,7 +580,7 @@ service hcidump /system/bin/sh /system/etc/hcidump.sh
 service charger /charger
     class charger
     critical
-    seclabel u:r:charger:s0
+    seclabel u:r:healthd:s0
 
 on charger
     write /sys/class/leds/lcd-backlight/brightness 100
