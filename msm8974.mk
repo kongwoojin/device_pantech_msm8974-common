@@ -111,6 +111,10 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing \
     libqcomvoiceprocessingdescriptors
 
+# Binder support symbols
+PRODUCT_PACKAGES += \
+    libshim_binder
+
 # BoringSSL compatability wrapper
 PRODUCT_PACKAGES += \
     libboringssl-compat
