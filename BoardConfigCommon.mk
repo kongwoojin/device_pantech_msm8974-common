@@ -130,7 +130,7 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE   := 2566914048
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
-BOARD_ROOT_EXTRA_FOLDERS := firmware mpt persist
+BOARD_ROOT_EXTRA_FOLDERS := firmware persist
 TARGET_FS_CONFIG_GEN := device/pantech/msm8974-common/configs/config.fs
 
 # SDClang
@@ -185,10 +185,13 @@ TARGET_RIL_VARIANT := caf
 
 # SELinux
 # include device/qcom/sepolicy/sepolicy.mk
-include device/qcom/sepolicy-legacy/sepolicy.mk
+# include device/qcom/sepolicy-legacy/sepolicy.mk
+
+# BOARD_SEPOLICY_DIRS += \
+#     $(COMMON_PATH)/sepolicy
 
 BOARD_SEPOLICY_DIRS += \
-    $(COMMON_PATH)/sepolicy
+	device/pantech/msm8974-common/sepolicy-tmp
 
 # Sensor Compat
 BOARD_GLOBAL_CFLAGS += -DCOMPAT_SENSORS_M
