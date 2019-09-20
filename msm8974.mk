@@ -244,6 +244,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/libnfc-nci.conf:system/vendor/etc/libnfc-nci.conf \
     $(LOCAL_PATH)/configs/nfcee_access.xml:system/vendor/etc/nfcee_access.xml
 
+# Shipping API
+PRODUCT_SHIPPING_API_LEVEL := 19
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl
