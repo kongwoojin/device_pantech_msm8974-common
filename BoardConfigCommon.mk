@@ -16,6 +16,8 @@
 
 BOARD_VENDOR := pantech
 COMMON_PATH := device/pantech/msm8974-common
+BUILD_BROKEN_DUP_RULES := true
+
 # Include path
 TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 
