@@ -131,9 +131,6 @@ TARGET_USERIMAGES_USE_F2FS := true
 BOARD_ROOT_EXTRA_FOLDERS := firmware persist
 TARGET_FS_CONFIG_GEN := device/pantech/msm8974-common/configs/config.fs
 
-# SDClang
-TARGET_USE_SDCLANG := true
-
 # Graphics
 MAX_EGL_CACHE_KEY_SIZE := 12*1024
 MAX_EGL_CACHE_SIZE := 2048*1024
