@@ -422,7 +422,7 @@ service hciattach /system/vendor/bin/init.qcom.bt.sh
 on property:vendor.bluetooth.hciattach=true
     start hciattach
 
-n property:vendor.bluetooth.hciattach=false
+on property:vendor.bluetooth.hciattach=false
     setprop vendor.bluetooth.status off
 
 service hciattach_ath3k /system/bin/sh /system/etc/init.ath3k.bt.sh
@@ -456,7 +456,7 @@ service btsnoop /system/bin/btsnoop
 service ftmd /system/bin/logwrapper /system/bin/ftmdaemon
     class late_start
     user root
-    group bluetooth net_bt_admin misc net_bt_stack qcom_diag
+    group bluetooth net_bt_admin misc 
     disabled
     oneshot
 
@@ -605,7 +605,5 @@ service ril-daemon1 /system/bin/rild -c 2
     socket sap_uim_socket2 stream 660 bluetooth bluetooth
     socket rild-debug2 stream 660 radio system
     user root
-    group radio cache inet misc audio log readproc wakelock qcom_diag
+    group radio cache inet misc audio log readproc wakelock
 
-# Do not set any USB mode while charging
-    setprop sys.usb.config charging
