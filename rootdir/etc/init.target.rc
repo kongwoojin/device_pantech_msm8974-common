@@ -221,6 +221,15 @@ service bt_hsic_control /system/bin/sh /system/etc/hsic.control.bt.sh
 on property:bluetooth.hsic_ctrl=load_wlan
     start bt_hsic_control
 
+
+# FEATURE_PANTECH_WLAN, WIFI Porting ############################## -->
+#FEATURE_PANTECH_WLAN_MAC_ADDR_BACKUP
+service pan_mac_backup /vendor/bin/pan_mac_backup
+    class main
+    user root
+    oneshot
+# FEATURE_PANTECH_WLAN, WIFI Porting ############################## <--
+
 on property:bluetooth.hsic_ctrl=unbind_hsic
     start bt_hsic_control
 
