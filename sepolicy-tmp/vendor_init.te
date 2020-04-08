@@ -1,0 +1,2 @@
+allow vendor_init wifi_data_file:dir { search setattr };
+

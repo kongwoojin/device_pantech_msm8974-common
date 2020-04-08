@@ -1,0 +1,2 @@
+allow mediaserver fwk_camera_hwservice:hwservice_manager add;
+allow mediaserver cameraserver_service:service_manager add;

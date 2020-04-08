@@ -1,0 +1,5 @@
+allow init vendor_file:file execute_no_trans;
+allow init btnvtool_exec:file execute_no_trans;
+allow init shell_exec:file execute_no_trans;
+allow init sysfs_graphics:file write;
+allow init system_file:file execute_no_trans;
